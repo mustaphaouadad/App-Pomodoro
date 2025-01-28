@@ -26,6 +26,7 @@ body{
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 70px;
 }
 
 /*.body{
@@ -41,12 +42,21 @@ body{
 
 .title{
     font-size: 4em;
+    color: white;
     display:inline-block;
     position: absolute;
     top: 0;
     left: 0;
 }
-
+ /* hr{
+    width: 100%;
+    background-color: rgb(162, 159, 159);
+    height: 4px;
+    border-radius: 1em;
+    border: none;
+    margin-top: 50px;
+    position: absolute;
+} */
 .timer{
     font-size:10em;
     font-weight: 700;
@@ -132,3 +142,49 @@ button:hover{
   }
   
 
+  /* --------------list style */
+ .list-group-item {
+    background-color: rgba(255, 255, 255, 0.2); /* Transparency */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Space inside */
+    transition: transform 0.2s, background-color 0.2s; /* Smooth animation */
+  }
+
+  .list-group-item:hover {
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly less transparent */
+    transform: scale(1.02); /* Zoom effect */
+  }
+
+  .list-group-item h5 {
+    color: #333; /* Title color */
+    font-weight: bold;
+  }
+
+  .list-group-item p {
+    color: #666; /* Description color */
+  }
+
+  .form-check-label {
+    font-size: 14px; /* Smaller font for checkbox label */
+    color: #555;
+  }
+
+  .btn-primary {
+    background-color: #007bff; /* Bootstrap blue */
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue */
+  }
+
+  .btn-danger {
+    background-color: #dc3545; /* Bootstrap red */
+    border: none;
+  }
+
+  .btn-danger:hover {
+    background-color: #a71d2a; /* Darker red */
+  }
