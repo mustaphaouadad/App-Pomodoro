@@ -4,6 +4,15 @@
     box-sizing: border-box;
     font-family: "Poppins";
 }
+body{
+    background: linear-gradient(
+        -135deg,
+        rgb(39,28,243),#ec2f12);
+        min-height: 100vh;
+        display: flex;
+        align-items: center ;
+        justify-content: center;
+}
 .A{
      display: flex; 
      flex-direction: column; 
@@ -19,32 +28,25 @@
     margin-right: auto;
 }
 
-body{
-    min-height: 100vh;
+/*.body{
+     min-height: 100vh;
     background: linear-gradient(
         -135deg,
-        rgb(39,28,243),#ec2f12);
-        display: flex;
-        align-items: center ;
-        justify-content: center;
+        rgb(39,28,243),#ec2f12); 
        
-}
+         align-items: center ;
+        justify-content: center; 
+       
+} */
 
 .title{
-    font-size: 3em;
+    font-size: 4em;
     display:inline-block;
     position: absolute;
     top: 0;
     left: 0;
 }
- hr{
-    width: 100%;
-    background-color: rgb(162, 159, 159);
-    height: 4px;
-    border-radius: 1em;
-    border: none;
-    margin-top: 100px;
-}
+
 .timer{
     font-size:10em;
     font-weight: 700;
@@ -80,8 +82,9 @@ button:hover{
     background-color: rgb(24,137,242);
 }
 /* ------------ */
-.btn{
+.btn-group button{
     width: 200px;
+    height: 40px;
     background-color: blue;
     color: black;
     border-radius: 10px;
@@ -99,6 +102,7 @@ button:hover{
     margin-bottom: 10px;
     margin-top: 0;
     position: absolute;
+    padding:0.3em 0.5em ;
   
      
 }

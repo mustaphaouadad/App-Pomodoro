@@ -9,12 +9,13 @@
     <title>Pomodoro</title>
 </head>
 <body>
+    <div class="body">
    
          <div class="container">
             <h1 class="title"><i class="bi bi-check-circle"></i>Xenos</h1>
             <button class="b1" data-bs-toggle="modal" data-bs-target="#myform"><i class="bi bi-plus-circle-fill"></i>Add Task</button>
             
-            <hr>
+            <!-- <hr> -->
    <section class="A">
    
        
@@ -75,6 +76,57 @@
     </div>
  </div>
     <!-- --------------- -->
+     
+  
+    <div class="container mt-4">
+      <ul class="list-group">
+        <!-- List Item -->
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <!-- Task Details -->
+          <div>
+            <h5 class="mb-1">Titre de la tâche</h5>
+            <p class="mb-1">Description de la tâche</p>
+            <small>Priorité : Casablanca</small>
+          </div>
+          <!-- Actions -->
+          <div class="d-flex align-items-center">
+            <!-- Checkbox for Task Completion -->
+            <div class="form-check me-3">
+              <input class="form-check-input" type="checkbox" id="completeTask1">
+              <label class="form-check-label" for="completeTask1">
+                Terminée
+              </label>
+            </div>
+            <!-- Edit and Delete Buttons -->
+            <button class="btn btn-primary btn-sm me-2">Modifier</button>
+            <button class="btn btn-danger btn-sm">Supprimer</button>
+          </div>
+        </li>
+    
+        <!-- Another List Item -->
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div>
+            <h5 class="mb-1">Titre de la tâche 2</h5>
+            <p class="mb-1">Une autre description</p>
+            <small>Priorité : Rabat</small>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="form-check me-3">
+              <input class="form-check-input" type="checkbox" id="completeTask2">
+              <label class="form-check-label" for="completeTask2">
+                Terminée
+              </label>
+            </div>
+            <button class="btn btn-primary btn-sm me-2">Modifier</button>
+            <button class="btn btn-danger btn-sm">Supprimer</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+     <!-- aaaaaaaaaaaaaaaaa -->
+
+    </div>
     <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
