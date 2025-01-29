@@ -95,16 +95,16 @@ button:hover{
 .btn-group button{
     width: 200px;
     height: 40px;
-    background-color: blue;
+    /* background-color: blue; */
     color: black;
     border-radius: 10px;
 }
 
-
+/* 
 .bi{
    color: blue;
    margin-right: 20px;
-}
+} */
 .b1{
     background-color: blueviolet;
     top: 0;
@@ -188,3 +188,15 @@ button:hover{
   .btn-danger:hover {
     background-color: #a71d2a; /* Darker red */
   }
+
+
+
+  .error-message {
+    color: red;
+    font-size: 0.875em;
+    margin-top: 15px;
+    display: block;
+}
+input.error, select.error {
+    border: 1px solid red;
+}
