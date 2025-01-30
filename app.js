@@ -112,7 +112,7 @@ function toggleComplete(index) {
         titreErrore.textContent="Le titre est obligatoire.";
         isValid=false;
     }
-
+    return isValid;
   }
 
 
@@ -162,3 +162,18 @@ const timer = document.getElementById("timer");
    start.addEventListener("click",startTimer);
    stop.addEventListener("click",stopTimer);
    reset.addEventListener("click",resetTimer);
+
+
+//    ----------------------butoooon
+document.getElementById("focus").addEventListener("click", function () {
+    document.getElementById("timer").textContent = "25:00";
+});
+
+document.getElementById("shortbreak").addEventListener("click", function () {
+    document.getElementById("timer").textContent = "5:00";
+});
+
+document.getElementById("longBreak").addEventListener("click", function () {
+    document.getElementById("timer").textContent = "10:00";
+});
+

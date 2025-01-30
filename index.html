@@ -11,7 +11,7 @@
 <body>
     <div class="body">
    
-         <div class="container">
+         <div class="container ">
             <h1 class="title"><i class="bi bi-check-circle"></i>Xenos</h1>
             <button class="b1" data-bs-toggle="modal" data-bs-target="#myform"><i class="bi bi-plus-circle-fill"></i>Add Task</button>
             
@@ -20,13 +20,13 @@
    
        
             <div class="btn-group" role="group" aria-label="Basic outlined example">
-                <button type="button" class="btn btn-outline-primary">Pomodoro</button>
-                <button type="button" class="btn btn-outline-primary">Courtes</button>
-                <button type="button" class="btn btn-outline-primary"> Longues</button>
+                <button type="button" id="focus" class="btn btn-outline-primary">Short Break</button>
+                <button type="button" id="shortbreak" class="btn btn-outline-primary">Push your limites</button>
+                <button type="button" id="longBreak" class="btn btn-outline-primary"> Long Break</button>
               </div>
 
         
-        <p class="timer" id="timer">25:00</p>
+        <p class="timer" id="timer"></p>
         <div class="button-wrapper">
             <button id="start">Start</button>
             <button id="stop">Stop</button>
