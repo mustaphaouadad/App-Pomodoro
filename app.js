@@ -6,23 +6,24 @@ let form = document.getElementById("form"),
     tachInfo = document.getElementById("data"),
     modal = document.getElementById("myform"),
     b1btn = document.querySelector(".b1");
+     titreErrore = document.getElementById("titreErrore");
 
 let getData = localStorage.getItem('newTache') ? JSON.parse(localStorage.getItem('newTache')) : [];
 let isEdit = false, editId;
 console.log(getData);
 
-// Affichage des tâches
+
 showTach();
 
-// Événement de clic sur le bouton "Add Task"
+
 b1btn.addEventListener('click', () => {
     isEdit = false;
     form.reset();
 });
 
-// Fonction d'affichage des tâches
+
 function showTach() {
-    tachInfo.innerHTML = ""; // Clear list before appending
+    tachInfo.innerHTML = ""; 
     getData.forEach((tach, index) => {
         let creatTach = `
         <li class="list-group-item d-flex justify-content-between align-items-center tachDetails">
@@ -47,11 +48,11 @@ function showTach() {
                 </button>
             </div>
         </li>`;
-        tachInfo.innerHTML += creatTach; // Add task to list
+        tachInfo.innerHTML += creatTach; 
     });
 }
 
-// Fonction pour enregistrer une nouvelle tâche
+
 submitBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -59,26 +60,26 @@ submitBtn.addEventListener('click', (e) => {
         titre: titre.value,
         Description: Description.value,
         Priorité: Priorité.value,
-        completed: false // Default to not completed
+        completed: false 
     };
 
     if (isEdit) {
-        // Si on modifie une tâche existante
+       
         getData[editId] = newTach;
         localStorage.setItem('newTache', JSON.stringify(getData));
-        showTach(); // Réafficher les tâches après modification
+        showTach(); 
     } else {
-        // Si on ajoute une nouvelle tâche
+       
         getData.push(newTach);
         localStorage.setItem('newTache', JSON.stringify(getData));
-        showTach(); // Réafficher les tâches après ajout
+        showTach(); 
     }
 
-    modal.classList.remove("show"); // Fermer la modal
-    form.reset(); // Réinitialiser le formulaire
+    modal.classList.remove("show"); 
+    form.reset(); 
 });
 
-// Fonction pour modifier une tâche
+
 function editTach(index, titre, description, priorite) {
     isEdit = true;
     editId = index;
@@ -88,32 +89,33 @@ function editTach(index, titre, description, priorite) {
     Priorité.value = priorite;
 }
 
-// Fonction pour supprimer une tâche
+
 function deleteInfo(index) {
-    getData.splice(index, 1); // Supprimer la tâche
+    getData.splice(index, 1); 
     localStorage.setItem('newTache', JSON.stringify(getData));
-    showTach(); // Réafficher les tâches après suppression
+    showTach(); 
 }
 
-// Fonction pour changer l'état "complété" d'une tâche
+
 function toggleComplete(index) {
     getData[index].completed = !getData[index].completed;
     localStorage.setItem('newTache', JSON.stringify(getData));
-    showTach(); // Réafficher les tâches après modification
+    showTach(); 
 }
-// validation des titre
-  function validation() {
+
+function validation() {
     let isValid = true;
-    const titre = document.getElementById("titre");
-    const titreErrore=document.getElementById("titreErrore");
-    titreErrore.textContent="";
+    titreErrore.textContent = "";
 
     if (!titre.value.trim()) {
-        titreErrore.textContent="Le titre est obligatoire.";
-        isValid=false;
+        titreErrore.textContent = "Le titre est obligatoire.";
+        titreErrore.style.color = "red";
+        isValid = false;
     }
+
     return isValid;
-  }
+}
+
 
 
 
@@ -217,14 +219,14 @@ const timer = document.getElementById("timer");
 });
 
 document.getElementById("longBreak").addEventListener("click", function () {
-    document.getElementById("timer").textContent = "10:00";
+    document.getElementById("timer").textContent = "15:00";
     const start = document.getElementById("start");
 const stop = document.getElementById("stop");
 const reset = document.getElementById("reset");
 const timer = document.getElementById("timer");
 
 
-   let timeLeft = 600;
+   let timeLeft = 900;
    let interval;
 
    const updateTime = () =>{
@@ -242,7 +244,7 @@ const timer = document.getElementById("timer");
         if (timeLeft === 0) {
             clearInterval(interval);
             alert("Time's up!");
-            timeLeft = 600;
+            timeLeft = 900;
             updateTime();
             
         }
@@ -254,7 +256,7 @@ const timer = document.getElementById("timer");
    const stopTimer = () => clearInterval(interval);
    const resetTimer = () =>{
     clearInterval(interval);
-    timeLeft = 600;
+    timeLeft = 900;
     updateTime();
    }
    start.addEventListener("click",startTimer);
